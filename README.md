@@ -1,17 +1,23 @@
 # interview-note
 
-My interview note.
+## 目前状态
 
-## 简历
+目前正在找 C++ Linux 后端开发的实习，前途未卜中。
 
-[简历链接(第1版)](./src/resume_v1.pdf) github网页无法正常显示，需下载
+[简历 Resume](./src/resume_v1.pdf) (网页无法正常显示，需下载)
 
 ## 面试记录
 
-1. 大三下日常实习：  
-  2022/1/3 寒假正式开始  
-  2022/1/6
+None
 
-## 实习记录
+## 实习情况
 
-目前没有呜呜呜
+None
+
+## 刷题笔记
+
+None
+
+## 其他笔记
+
+None
