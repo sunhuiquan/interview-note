@@ -8,9 +8,13 @@
 
 None
 
+---
+
 ## 实习情况
 
 None
+
+---
 
 ## 应试笔记
 
@@ -24,18 +28,14 @@ None
 ### 数据结构/算法
 
 1. 数据结构
-    - 栈
-      - 栈/递归
-      - 单调栈
-    - 队列
-    - [链表]()
-    - 哈希表
-    - 数组	
+    - [栈](#栈)
+      - [栈/递归](#栈递归)
+      - [单调栈](#单调栈)
+    - [链表](#链表)
 
 2. 算法
-    - 搜索
-      - BFS
-      - DFS
+    - [搜索](#搜索)
+      - [BFS/DFS](#BFSDFS)
       - 回溯
     - 动态规划
     - 贪心思想
@@ -47,15 +47,21 @@ None
 
 #### 栈
 
-1. 栈/递归
-    - 水题：LC20-Easy、LC225-Easy、LC232-Easy
-        - LC155-Easy 运用辅助栈,多使用一个栈来保存别的信息，让辅助栈来跟随主栈push\pop操作，并保存每一层的最小值情况。
-        - LC394-Medium 解析上一层需要前需要先解析下一层得到信息，明显就是递归，将 [ 和 ] 分别作为递归的开启与终止条件。
-2. 单调栈
+##### 栈/递归
+
+水题：LC20 Easy、LC225 Easy、LC232 Easy
+
+|题号|笔记|
+|:-|:-|
+|LC155 Easy|运用辅助栈,多使用一个栈来保存别的信息，让辅助栈来跟随主栈push\pop操作，并保存每一层的最小值情况。|
+|LC394 Medium|解析上一层需要前需要先解析下一层得到信息，明显就是递归，将 [ 和 ] 分别作为递归的开启与终止条件。|
+
+##### 单调栈
 
 #### 链表
    
-水题：LC2-Medium、LC21-Easy、LC24-Medium、LC83-Easy、LC206-Easy、LC328-Medium、LC725-Medium  
+水题：LC2 Medium、LC21 Easy、LC24 Medium、LC83 Easy、LC206 Easy、LC328 Medium、LC725 Medium
+
 |题号|笔记|
 |:-|:-|
 |LC19 Medium|链表倒数第n个节点，先让一个指针指向正向第n个，然后另一个指针指向头结点，当第一个指针到末尾时，第二个指针就到了倒数第n个节点上。|
@@ -67,18 +73,25 @@ None
 |LC445 Medium|这道题本身很简单，难点在于得到逆序的数值，关于逆序我们首先就要想到栈，使用栈很简单，比反转链表方便多了。|
 
 #### 数组
-        - 水题：LC108-Easy
+
+水题：LC108 Easy
 
 #### 搜索
-      - BFS/DFS
-        - LC93-Medium
-        - LC130-Medium       
-        - LC200-Medium
-        - LC207-Medium
-        - LC257-Easy
-        - LC399-Medium
-        - LC417-Medium
-        - LC547-Medium
-        - LC695-Easy
+
+##### BFS/DFS
+
+水题：
+
+|题号|笔记|
+|:-|:-|
+|LC93 Medium||
+|LC130 Medium||
+|LC200 Medium||
+|LC207 Medium||
+|LC257 Easy||
+|LC399 Medium||
+|LC417 Medium||
+|LC547 Medium||
+|LC695 Easy||
 
 ### to do
