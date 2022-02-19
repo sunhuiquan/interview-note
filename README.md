@@ -48,7 +48,7 @@ None
 
 ### **数组**
 
-水题：
+水题：LC240 Medium、LC448 Easy、LC485 Easy、LC566 Easy、LC654 Medium、LC697 Easy、LC766 Easy
 
 |题号|笔记|
 |:-|:-|
