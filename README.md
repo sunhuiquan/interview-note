@@ -48,12 +48,13 @@ None
 
 ### **数组**
 
-水题：LC240 Medium、LC448 Easy、LC485 Easy、LC566 Easy、LC654 Medium、LC697 Easy、LC766 Easy
+水题：LC108 Easy、LC240 Medium、LC448 Easy、LC485 Easy、LC566 Easy、LC654 Medium、LC697 Easy、LC766 Easy
 
 |题号|笔记|
 |:-|:-|
 |LC283 Easy|双指针交换类型，注意当左索引没有指0的时候，左右索引相同，交换的是自身。|
-|||
+|LC287 Medium||
+|LC442 Medium||
 
 ### **栈**
 
@@ -82,9 +83,17 @@ None
 |LC234 Easy|不使用额外空间的做法，快慢指针找中间节点，然后后半个链表再反转（使用前中后三个节点来实现反转），然后比较这两个链表。
 |LC445 Medium|这道题本身很简单，难点在于得到逆序的数值，关于逆序我们首先就要想到栈，使用栈很简单，比反转链表方便多了。|
 
-### **数组**
+### **字符串**
 
-水题：LC108 Easy
+水题：LC9 Easy、LC205 Easy、LC242 Easy、LC409 Easy
+
+|题号|笔记|
+|:-|:-|
+|||
+|||
+|||
+|||
+|||
 
 ### **搜索**
 
