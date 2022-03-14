@@ -49,6 +49,7 @@ None
       - [BFS/DFS](#BFSDFS)
       - [回溯](#回溯) 301 526
     - [排序](#排序)
+      - [简单的排序](#简单的排序)
       - [快速选择](#快速选择)
       - [堆排序](#堆排序)      
       - [桶排序](#桶排序)
@@ -256,6 +257,53 @@ to do另一种方法|LC572 Easy|利用一个性质，那就是相同树结构的
 |LC142 Medium|环形链表，要找到环开始的节点，快慢指针很麻烦，使用vector来存节点，然后比较是否存在相同节点很简单，两者时间复杂度都是O(n)，不过这样空间复杂度是O(n)；如果要使用快慢指针，推出a=c+(n−1)(b+c)后，让新的指针从头走，slow指针接着走，发现当新指针走了a步，slow指针走了c步和n-1圈，刚好相交，这就是起始点，所以我们直接找新指针和slow指针第一次相交即可，此时就是起始点（https://leetcode-cn.com/problems/linked-list-cycle-ii/solution/huan-xing-lian-biao-ii-by-leetcode-solution/）。|
 
 ### **排序**
+
+#### 简单的排序
+
+1. 冒泡排序，复杂度O(n^2)，是一种稳定的排序（不会改变相同元素的相对位置）。
+   
+```C++
+
+void bubble_sort(int arr[], int len) {
+	int i, j, change=1;      
+	for (i = 0; i < len - 1 && change != 0; ++i)
+    {
+        change=0;
+		for (j = 0; j < len - 1 - i; ++j)
+			if (arr[j] > arr[j + 1])
+            {
+				swap(arr[j], arr[j + 1]);
+                change = 1;
+        	}
+    }
+}
+
+// 第一处是注意第二重循环只需要比较仍然无需的序列，也就是从 0 到 len - 1 - i
+// 第二处是注意通过标志位，避免对排好序了的数组再无用的遍历下去
+
+```
+
+2. 插入排序
+
+```c++
+
+void insertion_sort(int arr[],int len){
+        for(int i=1;i<len;i++){
+                int key=arr[i];
+                int j=i-1;
+                while((j>=0) && (key<arr[j])){
+                        arr[j+1]=arr[j];
+                        j--;
+                }
+                arr[j+1]=key;
+        }
+}
+
+// 原理就是将未排序序列的第一个元素（arr[i]），插入到已排序序列中合适的位置（通过key和从后往前的arr[j]的比较）
+
+```
+
+3. 选择排序 
 
 #### 快速选择
 
