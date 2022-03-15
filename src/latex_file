@@ -14,62 +14,59 @@
 \name{孙慧泉}
 
 \basicInfo{
-  \phone{183532xxxxx}
+  \phone{18353287416}
   \email{february2048@163.com} 
   \github[github]{https://github.com/sunhuiquan} 
   \homepage[blog]{https://sunhuiquan.github.io} 
    }
    
 \section{简介}
-\datedsubsection{\textbf{青岛科技大学}, 青岛}{2019 -- 至今}
-学校专业：计算机科学与技术（本科），预计毕业日期：2023.05
-
-目标岗位：C/C++ Linux后台开发岗
+\datedsubsection{\textbf{青岛科技大学}, 青岛}{2019 -- 2023}
+专业：计算机科学与技术
 
 \section{技能}
 \begin{itemize}[parsep=0.5ex]
-  \item \textbf{编程语言}： 熟悉 C C++，了解 C\# Java。
-  \item \textbf{Linux系统编程}：熟悉Linux常用系统调用和大部分常用命令，熟悉manpage,较为了解Linux系统编程知识如各种I/O模型、I/O多路复用、文件系统模型、多进程、多线程、信号、进程间通信/同步、作业控制、socket基础、伪终端等基础知识。
-  \item \textbf{Socket编程基础}：熟悉Socket编程，较为了解TCP、UDP的原理和行为，了解使用tcpdump或wireshark抓包分析，了解常用的netstat、nc、telnet、inetd程序。
-  \item \textbf{开发工具使用}：熟练使用git工具，较为熟悉vim、gcc、gdb的使用、了解cmake的使用。
-  \item \textbf{其他}：通过国外名校公开课并完成对应的课程lab进行学习(CMU15-213，CS144，CMU15-445，MIT6.S081)，专业课基础较好；英语裸考过六级，能够较为顺畅地阅读和编写英文文档，使用StackOverflow等。
+  \item \textbf{编程语言}： 熟练使用 C C++，能够使用 C\# Java python。
+  \item \textbf{Linux系统编程}：熟悉Linux常用系统调用和shell的常用命令，熟悉manpage,较为了解Linux系统编程知识如各种I/O模型、文件系统、多进程、多线程、信号、进程间通信/同步、socket基础等基础知识。
+  \item \textbf{网络编程}：熟悉Socket编程，较为了解TCP、UDP的原理和行为，了解使用tcpdump或wireshark抓包分析，了解常用的netstat、nc、telnet、inetd指令。
+  \item \textbf{开发环境}：熟悉Linux环境下编程，熟练使用git工具，较为了解vim、gcc、gdb、cmake等常见工具的使用。
+  \item \textbf{其他}：完成一些国外名校公开课和对应的lab(CMU15-213，CS144，MIT6.S081)，专业课基础较好；英语裸考过六级，能够较为顺畅地阅读和编写英文文档，熟练使用Google、github和StackOverflow。
 \end{itemize}
 
 \section{项目}
 \textbf{FUSE FileSystem}\hfill{https://github.com/sunhuiquan/fuse-toy-fs}
 
-实现一个支持并发、日志恢复、仿UNIX实现的用户态(通过libfuse)文件系统。
+借鉴xv6的文件系统和ext2，实现一个支持并发、日志恢复的轻量级用户态文件系统，通过挂载到Linux上运行。
 \begin{itemize}[parsep=0.5ex]
-  \item 正在写
-  \item 正在写
-  \item 正在写
-  \item TO DO 这也是我OS课设，现在连个影都没有呢，打算接下来一个月内做了，现在先占坑>\_<。
+  \item 通过libfuse库，使得内核态的linux VFS机制代码能与我们在用户态实现的文件系统沟通。
+  \item 分层结构，设计磁盘层、日志层、inode层、位图层、块缓冲层这五层，降低耦合度和实现难度。
+  \item 通过对写系统调用采用简单的事务批处理机制，保证数据一致性，并通过日志层对应的日志数据块存储的数据实现日志恢复功能。
 \end{itemize}
 
 \textbf{Toy TCP}\hfill{https://github.com/sunhuiquan/CS144\_lab}
 
-完成CS144计网Lab，读完《计算机网络：自顶向下》，使用C++实现了一个简单的玩具TCP协议
+读完《计算机网络：自顶向下》，完成CS144计网Lab，内容是使用C++实现了一个玩具级的TCP协议
 \begin{itemize}[parsep=0.5ex]
   \item 实现三次握手、四次挥手和TCP状态机的11种状态之间的切换。
   \item 实现接受端的流重组器，将到来的可能乱序的字节流重组，有序地放入接受缓冲区。
   \item 实现简化的累计确认重传机制，保证TCP的可靠性。
-  \item 实现滑动窗口，来保证流量控制；实现慢启动和拥塞避免的机制，来保证拥塞控制。
+  \item 实现滑动窗口，来保证流量控制；实现慢启动和拥塞避免机制的来完成拥塞控制。
 \end{itemize}
 
 \textbf{TLPI learn note}\hfill{https://github.com/sunhuiquan/tlpi-learn}
 
-因网上没有比较全的《UNIX/LINUX 系统编程手册》答案，所以我完成了几百道关于Linux系统编程各方面的练习题并开源。
+因网上没有比较全的《UNIX/LINUX 系统编程手册》这本书的答案，所以我完成了几百道关于Linux系统编程各的题目并开源，并获得50+ stars。
 
 \textbf{MIT6.S081 Labs}\hfill{https://github.com/sunhuiquan/mit\_6.S081\_lab}
 
-完成麻省理工的MIT6.S081操作系统课大作业，阅读XV6操作系统源码，通过为xv6增改代码，较为深入地了解操作系统的虚拟内存、进程切换、系统调用、内存分配、文件系统、锁机制等实现原理。
+配合《操作系统概念》，完成MIT6.S081操作系统课大作业，阅读和修改xv6操作系统源码，通过为xv6实现页表、实现惰性内存分配、实现fork写时复制、扩大inode的索引层数等实验，较为深入地了解了操作系统的虚拟内存、进程切换、系统调用、内存分配、文件系统、锁机制等实现原理。
 
 \textbf{CSAPP Labs}\hfill{https://github.com/sunhuiquan/csapp\_lab}
 
-读完CSAPP（《深入理解计算机系统》），完成CMU15-213课程及其lab，实现基于隐式空闲链表实现的简易动态内存分配器（malloclab），实现玩具shell程序（shlab）和玩具代理服务器（proxylab）。
+读完《深入理解计算机系统》，完成CMU15-213课程及其lab，实现基于隐式空闲链表的简易动态内存分配器（malloclab），实现玩具shell程序（shlab）和玩具代理服务器（proxylab）。
 
 \textbf{C\# car-rental-app}\hfill{https://github.com/sunhuiquan/car-rental-app}
 
-实现C/S架构的车位出租应用,使用C\#+Winform实现客户端，使用C\#socket和thread实现多线程网络服务器模型，云服务器上建立MySQL数据库，使用C\#和MySQL语句对数据库增删改查。
+实现C/S架构的车位出租应用,使用C\#+Winform实现客户端，使用C\#socket和thread实现多线程网络服务器，云服务器上建立MySQL数据库，并在服务器上使用对数据库增删改查处理业务。
 
 \end{document}
