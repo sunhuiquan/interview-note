@@ -2,7 +2,7 @@
 
 目前正在找 C++ Linux 后端开发的实习，前途未卜中。
 
-[简历（未完成） Resume](./src/resume_v2.pdf) (网页无法正常显示，需下载)
+[简历 Resume](./src/resume_v2.pdf) (网页无法正常显示，需下载)
 
 ## 面试记录
 
