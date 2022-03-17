@@ -242,6 +242,8 @@ DFS使用的标记数组是不需要状态重置的，因为这是一个全局�
 
 水题：to do 撤销操作完成状态重置LC17 Medium
 
+<!-- to do hard 37 51 301 -->
+
 |题号|笔记|
 |:-|:-|
 |LC46 Medium|不重复数组的全排列，注意通过循环交换来实现取本层的数，并且把没取过的数形成一个新的数组传下去（只需要去掉交互到开头的那一个即可，如果不通过交换那么代码会比较复杂，而且如果是删除中间的元素会导致移动，效率很低）。|
@@ -249,15 +251,12 @@ DFS使用的标记数组是不需要状态重置的，因为这是一个全局�
 |LC77 Medium|组合问题，从n个数里面选k个，列出全部组合情况（一种组合中内部的顺序无意义），|
 |LC79 Medium||
 to do 撤销操作完成状态重置|LC93 Medium|字符串dfs遍历所有可能性即可，注意前导0格式问题。|
+|LC131 Medium||
 39
 40
 216
 78
 90
-131
-37
-51
-301
 526
 
 ### **双指针**
@@ -277,9 +276,11 @@ to do 撤销操作完成状态重置|LC93 Medium|字符串dfs遍历所有可能�
 
 ### **排序**
 
+![IMG](./img/all_kinds_sort.png)
+
 #### 简单的排序
 
-1. 冒泡排序，复杂度O(n^2)，是一种稳定的排序（不会改变相同元素的相对位置）。
+1. **冒泡排序**，复杂度O(n^2)，是一种稳定的排序（不会改变相同元素的相对位置）。
    
 ```C++
 
@@ -302,19 +303,38 @@ void bubble_sort(int arr[], int len) {
 
 ```
 
-2. 插入排序
+2. **选择排序**，复杂度O(n^2)，不稳定。
 
 ```c++
 
-void insertion_sort(int arr[],int len){
-        for(int i=1;i<len;i++){
-                int key=arr[i];
-                int j=i-1;
-                while((j>=0) && (key<arr[j])){
-                        arr[j+1]=arr[j];
-                        j--;
+void selection_sort(vector<int>& arr) {
+        for (int i = 0; i < arr.size() - 1; i++) {
+                int min = i;
+                for (int j = i + 1; j < arr.size(); j++)
+                        if (arr[j] < arr[min])
+                                min = j;
+                swap(arr[i], arr[min]);
+        }
+}
+
+```
+
+3. **插入排序**，复杂度O(n^2)，稳定。
+
+```c++
+
+void insertion_sort(int arr[],int len)
+{
+        for(int i = 1; i < len; ++i)
+		{
+                int key = arr[i];
+                int j = i - 1;
+                while((j >= 0) && (key < arr[j]))
+				{
+                        arr[j + 1] = arr[j];
+                        --j;
                 }
-                arr[j+1]=key;
+                arr[j + 1] = key;
         }
 }
 
