@@ -474,7 +474,7 @@ to do桶排序|LC347 Medium|求数组中频率前k高的元素集合，方法一
 
 |题号|笔记|
 |:-|:-|
-|LC146 Medium|LRU —— Least Recently Used 最近最少使用，关键是按上一次的访问时间排序，然后逐出的是最久未访问的数据。使用哈希表(unordered_map)+双向链表实现，完成get和put都是O(1)的复杂度，注意只有unordered_map基于哈希的，map是基于红黑树的，查询复杂度是O(log n)。|
+|LC146 Medium|LRU —— Least Recently Used 最近最少使用，关键是按上一次的访问时间排序，然后逐出的是最久未访问的数据。使用的是一个叫哈希链表的数据结构，即哈希表和双向链表，完成get和put都是O(1)的复杂度。注意unordered_map才是基于哈希的，map是基于红黑树的，查询复杂度是O(log n)。|
 |LC460 Hard|LFU —— |
 
 ### **滑动窗口**
