@@ -16,7 +16,7 @@
 |:-|:-|:-|:-|:-|:-|:-|
 |米哈游|云游戏后台研发|4/10|X|X|X|笔试挂|
 |百度|-|4/12|4/17|4/17|4/17|面试中|
-|阿里|-|4/15|-|-|-|笔试中|
+|阿里|-|4/15|-|-|-|笔试挂|
 |趋势科技|-|4/22|-|-|-|笔试中|
 
 ### 23秋招提前批(2022/6 - 2022/7)
@@ -393,6 +393,62 @@ void insertion_sort(int arr[],int len)
 
 #### 快速排序
 
+面试考的次数挺多的，一定要会写。
+
+```c++
+class Solution
+{
+public:
+	vector<int> sortArray(vector<int> &nums)
+	{
+		quickSort(nums, 0, nums.size() - 1);
+		return nums;
+	}
+
+private:
+	void quickSort(vector<int> &nums, int l, int r)
+	{
+		if (l < r)
+		{
+			int index = partition(nums, l, r);
+			quickSort(nums, l, index - 1);
+			quickSort(nums, index + 1, r);
+		}
+	}
+
+	int partition(vector<int> &nums, int l, int r)
+	{
+		int p = (rand() % (r - l + 1)) + l;
+		swap(nums[l], nums[p]);
+		int s = nums[l];
+		int start = l;
+		while (l < r)
+		{
+			/* 这里一定要先写 --r，因为开头的基准可以作为哨兵，当之后所有元素都
+			 * 小于基准的时候，r 会变成 start 正常停止；
+			 * 而如果先写 ++l，当基准后所有元素都小于等于基准时，l 的值就会变成
+			 * 最后一个小于等于的元素下标，和其他情况下的 l 终止状态(第一个大于
+			 * 的下标)不一样，导致错误。
+			 */
+			while (l < r && nums[r] > s)
+				--r;
+			while (l < r && nums[l] <= s)
+				++l;
+			if (l < r)
+				swap(nums[l], nums[r]);
+		}
+		swap(nums[start], nums[r]);
+		return l;
+	}
+
+	void swap(int &left, int &right)
+	{
+		int t = left;
+		left = right;
+		right = t;
+	}
+};
+```
 
 #### 堆排序
 
