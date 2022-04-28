@@ -26,13 +26,17 @@ int main()
 
 	A *p1 = &a;
 	cout << typeid(p1).name() << endl;
+	cout << typeid(*p1).name() << endl;
 	A *p2 = &b;
 	cout << typeid(p2).name() << endl;
-
-	p1->f();
-	p2->f();
+	cout << typeid(*p2).name() << endl;
 
 	if (typeid(p1) == typeid(p2))
+		cout << "true" << endl;
+	else
+		cout << "false" << endl;
+
+	if (typeid(*p1) == typeid(*p2))
 		cout << "true" << endl;
 	else
 		cout << "false" << endl;
