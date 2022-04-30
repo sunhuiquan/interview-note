@@ -200,7 +200,7 @@ st.push(num[i]);
 
 ### **树**
 
-173 671 778 897 938 993
+173
 
 #### 普通题型
 
@@ -227,7 +227,7 @@ to do另一种方法|LC572 Easy|利用一个性质，那就是相同树结构的
 
 #### 遍历
 
-水题：LC94 Easy、LC144 Easy、LC145 Easy、LC700 Easy、LC513 Medium
+水题：LC94 Easy、LC144 Easy、LC145 Easy、LC700 Easy、LC513 Medium、LC671 Easy
 
 |题号|笔记|
 |:-|:-|
@@ -293,6 +293,8 @@ to do另一种方法|LC572 Easy|利用一个性质，那就是相同树结构的
 ### **搜索**
 
 #### BFS/DFS
+
+<!-- 778 1631 -->
 
 水题：
 
