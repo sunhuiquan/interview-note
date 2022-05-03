@@ -153,6 +153,23 @@ st.push(num[i]);
 
 #### 堆(优先队列)
 
+有时候我们需要比较自定义类型，这个时候需要我们手写比较类，下面是一个例子。
+
+```c++
+struct cmp
+{
+	bool operator()(const ListNode *l1, const ListNode *l2)
+	{
+		return l1->val > l2->val;
+	}
+};
+
+//使用时
+priority_queue<ListNode *, vector<ListNode *>, cmp> pq;
+```
+
+prob 218 264
+
 跳转：[堆排序](#堆排序)
 
 #### 单调队列
@@ -203,8 +220,6 @@ st.push(num[i]);
 
 ### **树**
 
-prob 297 331
-
 #### 普通题型
 
 水题：LC112 Easy、LC404 Easy、LC106 Medium、LC107 Medium、LC04.02 Easy、LC563 Easy
@@ -230,6 +245,8 @@ to do另一种方法|LC572 Easy|利用一个性质，那就是相同树结构的
 
 #### 遍历
 
+prob 297 331
+
 水题：LC94 Easy、LC144 Easy、LC145 Easy、LC700 Easy、LC513 Medium、LC671 Easy
 
 |题号|笔记|
@@ -238,10 +255,9 @@ to do另一种方法|LC572 Easy|利用一个性质，那就是相同树结构的
 |LC173 Medium|笨办法需要 O(n) 复杂度，中序遍历结果放到向量里即可，不需要解释。另一种方式是通过栈的思路，to do|
 |LC199 Medium|二叉树的右侧视角(从右面看)，即每层最中最后的那个节点，层序遍历bfs即可完成，再记一下bfs内部for循环完成一层的遍历。同理左侧视角就是层序遍历每层最左面的节点了。|
 |LC270 Easy|查找离目标值最近的节点值，注意目标值是 double，所以要小心类型问题。另外 abs() 返回的是 int 类型，所以不能用在 double 上，需要手动去绝对值。|
-|LC297 Hard|to do|
-|LC331 Medium|to do|
 |LC606 Easy|这道题要利用递归函数的返回值，返回 string 代表处理的该个子树的结果，这样就可以把一个父问题变为处理 root 和两个子树的递归问题了，注意要用 string 返回值代表处理的子问题的结果，这样写起来会很简洁。|
 |LC637 Easy|层次遍历，外层while条件是队列不为空，内部一个for循环是当前层的结点遍历，for循环的次数是通过队列size函数来得到的，即当前层结点数。|
+|LC783 Easy|利用 BST 中序遍历的性质，直接在递归中做差取最小值即可。|
 |LC872 Easy|遍历树，内部用 !r->left && !r->right 对每一次递归的子树根节点判断是否是叶节点即可。|
 |LC897 Easy|笨办法是先中序遍历把每一个 root 存到 vector 里，然后再循环 vector 来构造。另一种方法不需要额外的空间复杂度，那就是中序遍历的时候记录上一个节点，让上一个节点的 right 是这一个节点即可，但这样我们需要额外考虑第一个节点的情况，一种好的方法是一开始 new 一个 dummy 节点作为前一个结点即可，这样不用考虑前一个结点为 nullptr 的情况。|
 |LC993 Easy|找到父节点和深度然后对比即可，可以使用参数来传递父节点，如果通过给一个变量不断赋值来记录父节点，要注意当找到答案后立马返回，避免又修改了。|
@@ -542,9 +558,21 @@ to do桶排序|LC347 Medium|求数组中频率前k高的元素集合，方法一
 
 #### 归并排序
 
+```c++
+void MergeSort (int arr [], int low,int high) {
+    if(low>=high)
+		return;
+    int mid =  low + (high - low) / 2;
+    MergeSort(arr,low,mid);
+    MergeSort(arr,mid+1,high);
+    merge(arr,low,mid,high);
+	// 合并两个有序序列，中间需要额外空间存排序后的结果，然后再拷贝回原数组
+}
+```
+
 |题号|笔记|
 |:-|:-|
-|LC23 Hard||
+|LC23 Hard|把 k 个链表一开始 push 进优先队列，之后循环取最小并如有下一个把下一个也 push 进入。注意对于自定义类型我们要自己手写比较类，然后注意为了避免讨论头指针，我们创建了一个 dummy 无用结点，最后返回 dummy.next 即可。|
 |LC148 Medium||
 |LC912 Medium||
 |LC1305 Medium|弱智的中序+归并做出，为什么用归并呢，因为中序后我们得到了两个分别有序的向量，显然归并 O(m + n)，像快排就无法用到已经有序这个属性，复杂度 O(nlogn)。|
