@@ -267,11 +267,12 @@ to do另一种方法|LC572 Easy|利用一个性质，那就是相同树结构的
 
 prob 297 331
 
-水题：LC94 Easy、LC144 Easy、LC145 Easy、LC700 Easy、LC513 Medium、LC671 Easy
+水题：LC94 Easy、LC116 Medium、LC144 Easy、LC145 Easy、LC700 Easy、LC513 Medium、LC671 Easy
 
 |题号|笔记|
 |:-|:-|
 |LC74 Medium|从右上角来看，你会发现这是一个BST，初始定义右上角坐标，然后循环比较 target 比较即可。|
+|LC117 Medium|层序遍历，prev 初始化为 nullptr，如果非空则 prev->next = p 连接下一个同层节点，内部 for 循环当 i == sz - 1 知道这是该层最后一个元素，把这个元素的 next 设为 nullptr 即可。|
 |LC173 Medium|笨办法需要 O(n) 复杂度，中序遍历结果放到向量里即可，不需要解释。另一种方式是通过栈的思路，to do|
 |LC199 Medium|二叉树的右侧视角(从右面看)，即每层最中最后的那个节点，层序遍历bfs即可完成，再记一下bfs内部for循环完成一层的遍历。同理左侧视角就是层序遍历每层最左面的节点了。|
 |LC270 Easy|查找离目标值最近的节点值，注意目标值是 double，所以要小心类型问题。另外 abs() 返回的是 int 类型，所以不能用在 double 上，需要手动去绝对值。|
