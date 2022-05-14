@@ -6,7 +6,7 @@
 
 [最新简历 Resume](./src/resume_v1.pdf) (网页可能无法正常显示，需下载)
 
-兴趣列表：PingCAP、DolphinDB、Singularity、SelectDB、Oceanbase、PolarDB、Polar-X、ByteGraph、TcaplusDB、XSKY、StarRocks、Databend、Smartx、Zilliz、MatrixOne、MatrixDB、Nebula Graph、Bytebase
+<!-- 兴趣列表：PingCAP、DolphinDB、Singularity、SelectDB、Oceanbase、PolarDB、Polar-X、ByteGraph、TcaplusDB、XSKY、StarRocks、Databend、Smartx、Zilliz、MatrixOne、MatrixDB、Nebula Graph、Bytebase -->
 
 ## 面试记录
 
