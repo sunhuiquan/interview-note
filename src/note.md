@@ -34,6 +34,9 @@
 34. map 的 count() 函数，如果在 map 中存在这个 key 的元素则返回 1，不存在返回 0，和 value 值无关。
 35. 注意 0 除以、被求模都会运行出错，所以注意一下这个特殊输入。
 36. vector 的 clear 函数是清除所有元素，而不是清零，size 会变成 0，如果不重新 resize 使用超过 size 的范围会产生未定义的行为，比如 vis 数组 clear 后要重新 resize，所以说还是用数组实现 vis 好，只需要 memset 好写效率也高。
+37. 别忘了对于经常插入删除的要用list，那么list 顺序访问写法，用迭代器?，下标访问是随机访问不能这样写？，remove要先找到对应的元素，复杂度怎么样？，如果多个元素都删除吗？，erase迭代器删除
+38. double 转 string 保留 n 位小数，通过 C 风格的 sprintf 的 "%.nlf" 实现，千万不要自己实现，涉及到复杂点的精度问题都是灾难。
+39. C++ double 转 string 默认 6 位精度，std::stringstream ss; ss << std::setprecision(15) << d（d 是 double 变量）; str = ss.str(); 这种方式可以设置精度。 38用这个方式呢？
 
 
 prob:
