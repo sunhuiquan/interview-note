@@ -37,6 +37,22 @@
 37. 别忘了对于经常插入删除的要用list，那么list 顺序访问写法，用迭代器?，下标访问是随机访问不能这样写？，remove要先找到对应的元素，复杂度怎么样？，如果多个元素都删除吗？，erase迭代器删除
 38. double 转 string 保留 n 位小数，通过 C 风格的 sprintf 的 "%.nlf" 实现，千万不要自己实现，涉及到复杂点的精度问题都是灾难。
 39. C++ double 转 string 默认 6 位精度，std::stringstream ss; ss << std::setprecision(15) << d（d 是 double 变量）; str = ss.str(); 这种方式可以设置精度。 38用这个方式呢？
+40. 使用pair作为unordered_map的key时会错误，因为C++标准中没有为pair提供hash函数，所以在使用的时候需要手写一个。不过刷题情况下我们用一个二维数组当成 pair 进行索引即可，当然实际中显然不能接受如此大的空间浪费。
+
+	```C++
+	struct pair_hash
+	{
+    	template<class T1, class T2>
+	    std::size_t operator() (const std::pair<T1, T2>& p) const
+	    {
+	        auto h1 = std::hash<T1>{}(p.first);
+	        auto h2 = std::hash<T2>{}(p.second);
+	        return h1 ^ h2;
+	    }
+	};
+
+	unordered_map<pair<int, int>, int, pair_hash> um; //ok
+	```
 
 
 prob:
