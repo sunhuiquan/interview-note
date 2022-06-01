@@ -218,7 +218,7 @@ prob 218
 
 #### 常规字符串
 
-水题：LC6 Medium、LC9 Easy、LC14 Easy、LC28 Easy、LC205 Easy、LC242 Easy、LC409 Easy
+水题：LC6 Medium、LC9 Easy、LC14 Easy、LC28 Easy、LC205 Easy、LC242 Easy、LC409 Easy、LC551 Easy
 
 |题号|笔记|
 |:-|:-|
@@ -630,9 +630,12 @@ prob 3 10 22 32 53 121 139 338 647
 
 #### 记忆化搜索
 
+prob 87 403 552
+
 |题号|笔记|
 |:-|:-|
 |LC375 Medium|每一层遍历猜的数，然后这个数加上另外两个范围的数的递归答案的最大值，遍历这一层猜的所有数的结果，得到最小值返回即可。为了优化我们记忆答案，注意 unordered_map 默认不能用 pair，因为没有关于 pair 的哈希要自己实现，另外直接用二维数组存答案也非常好，因为这道题的范围很小。|
+|LC464 Medium|一道博弈论的题，函数意思是判断输赢，这一步赢 (curr + i >= target) 或者对方输了 (!func(对方的调用))，返回 true，否则返回 false，另外再来个 vis 记录使用过的数。|
 
 #### 简单一维DP问题
 
