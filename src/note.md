@@ -53,6 +53,7 @@
 
 	unordered_map<pair<int, int>, int, pair_hash> um; //ok
 	```
+41. (a+b)%c =((a%c)+(b%c))%c; (a*b)%c = (a%c)*(b%c)%c 求模的犯溢出公式，注意最外侧也有一个求模。
 
 
 prob:
