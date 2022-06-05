@@ -55,6 +55,8 @@
 	```
 41. (a+b)%c =((a%c)+(b%c))%c; (a*b)%c = (a%c)*(b%c)%c 求模的犯溢出公式，注意最外侧也有一个求模。
 
+42. string 里面有 insert 和 erase 用于插入删除字符串，比手动两次 substr 再合起来快，注意一下，要用自带的 insert 和 erase。
+
 
 prob:
 1. AVL(平衡二叉树)
