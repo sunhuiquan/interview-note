@@ -57,6 +57,8 @@
 
 42. string 里面有 insert 和 erase 用于插入删除字符串，比手动两次 substr 再合起来快，注意一下，要用自带的 insert 和 erase。
 
+43. Contest297 的题2没改错
+
 
 prob:
 1. AVL(平衡二叉树)
